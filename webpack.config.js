@@ -25,7 +25,10 @@ module.exports = {
       { test: /.js$/, loader: 'babel-loader' },
       {
         test: /.(sc|sa|c)ss$/,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          isDevMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
+        ],
       },
     ],
   },
@@ -49,5 +52,6 @@ module.exports = {
       template: 'options/options.html',
       chunks: 'options',
     }),
+    new MiniCssExtractPlugin(),
   ],
 }
