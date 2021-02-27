@@ -1,9 +1,13 @@
 import React from 'react'
 import { Button, Descriptions } from 'antd'
 
-const Overview = () => {
+const Overview = ({ onAnalyze, isAnalyzed }) => {
   return (
-    <Descriptions bordered title="Video Title" extra={<Button>Analyze</Button>}>
+    <Descriptions
+      bordered
+      title="Video Title"
+      extra={!isAnalyzed ? <Button onClick={onAnalyze}>Analyze</Button> : null}
+    >
       <Descriptions.Item label="UserName">Zhou Maomao</Descriptions.Item>
       <Descriptions.Item label="Telephone">5556440123</Descriptions.Item>
       <Descriptions.Item label="Live">Hangzhou, Zhejiang</Descriptions.Item>

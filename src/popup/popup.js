@@ -23,22 +23,35 @@ const Summary = () => (
 )
 const Popup = () => {
   const [activeTab, setActiveTab] = useState('overview')
+  const [isSentimentDisabled, setIsSentimentDisabled] = useState(true)
+  const [isSummaryDisabled, setIsSummaryDisabled] = useState(true)
+  const [isAnalyzed, setAnalyzed] = useState(false)
   const tabList = [
     { key: 'overview', tab: 'Overview', disabled: false },
-    { key: 'sentiment', tab: 'Sentiment', disabled: true },
-    { key: 'summary', tab: 'Summary', disabled: true },
+    { key: 'sentiment', tab: 'Sentiment', disabled: isSentimentDisabled },
+    { key: 'summary', tab: 'Summary', disabled: isSummaryDisabled },
   ]
-  const contentList = {
-    overview: <Overview />,
-    sentiment: <Sentiment />,
-    summary: <Summary />,
-  }
+
   const handleTabChange = key => {
     console.log(key)
     setActiveTab(key)
   }
 
+  const toggleDisability = () => {
+    setIsSentimentDisabled(!isSentimentDisabled)
+    setIsSummaryDisabled(!isSummaryDisabled)
+    setTimeout(() => {
+      setAnalyzed(true)
+    }, 1000)
+  }
+
   const handleDarkMode = checked => console.log(checked)
+  const contentList = {
+    overview: <Overview onAnalyze={toggleDisability} isAnalyzed={isAnalyzed} />,
+    sentiment: <Sentiment />,
+    summary: <Summary />,
+  }
+
   return (
     <Card
       style={{ width: 450, minHeight: 320 }}
