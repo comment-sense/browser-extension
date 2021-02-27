@@ -6,15 +6,20 @@ const Overview = ({ onAnalyze, isAnalyzed }) => {
     <Descriptions
       bordered
       title="Video Title"
-      extra={!isAnalyzed ? <Button onClick={onAnalyze}>Analyze</Button> : null}
+      extra={
+        !isAnalyzed ? (
+          <Button type="primary" onClick={onAnalyze}>
+            Analyze
+          </Button>
+        ) : null
+      }
     >
-      <Descriptions.Item label="UserName">Zhou Maomao</Descriptions.Item>
-      <Descriptions.Item label="Telephone">5556440123</Descriptions.Item>
-      <Descriptions.Item label="Live">Hangzhou, Zhejiang</Descriptions.Item>
-      <Descriptions.Item label="Remark">empty</Descriptions.Item>
-      <Descriptions.Item label="Address">
-        No. 18, Wanting Road, Xihu District, Hangzhou, Zhejiang, China
-      </Descriptions.Item>
+      <Descriptions.Item label="Creator">Traversy Media</Descriptions.Item>
+      <Descriptions.Item label="Video Length">1hr 30min</Descriptions.Item>
+      <Descriptions.Item label="Uploaded At">'Today</Descriptions.Item>
+      <Descriptions.Item label="Total Comments">6,398</Descriptions.Item>
+      <Descriptions.Item label="Total Likes">1,361</Descriptions.Item>
+      <Descriptions.Item label="Total Dislikes">25K</Descriptions.Item>
     </Descriptions>
   )
 }

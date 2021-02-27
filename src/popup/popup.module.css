@@ -3,10 +3,18 @@
   min-height: 500px;
 }
 
-.btn {
-  margin-left: 8px;
+.brand {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
-.darkmode > span {
+.companyName {
+  margin-left: 0.5rem;
+}
+.darkMode {
+  margin-bottom: 1rem;
+}
+.darkMode > span {
   margin-right: 1rem;
 }

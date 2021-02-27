@@ -1,11 +1,13 @@
 import React from 'react'
 import { Statistic, Card, Row, Col } from 'antd'
 import { ArrowUpOutlined, ArrowDownOutlined } from '@ant-design/icons'
+import PropTypes from 'prop-types'
 import styles from './sentiment.module.css'
 
 const Sentiment = () => {
   return (
     <div className={styles.container}>
+      <h1>Viewer Sentiment</h1>
       <Row gutter={16}>
         <Col span={12}>
           <Card>
@@ -35,5 +37,7 @@ const Sentiment = () => {
     </div>
   )
 }
+
+Sentiment.propTypes = {}
 
 export default Sentiment
