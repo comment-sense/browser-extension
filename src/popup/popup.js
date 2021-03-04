@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Switch, Card } from 'antd'
-import 'antd/dist/antd.compact.min.css'
 import styles from './popup.module.css'
-import { Sentiment, Overview, Summary } from '../components'
 import brandURI from '../icons/logo@48x48.png'
+import { Sentiment, Overview, Summary } from '../components'
+import 'antd/dist/antd.compact.min.css'
 
 const Popup = () => {
   const [activeTab, setActiveTab] = useState('overview')

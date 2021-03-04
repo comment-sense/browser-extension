@@ -1,0 +1,15 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git",
+    "src",
+    "build",
+    "dist"
+  ],
+  "watch": [
+    "package.json",
+    "webpack.config.js",
+    ".babelrc"
+  ],
+  "runOnChangeOnly": false
+}

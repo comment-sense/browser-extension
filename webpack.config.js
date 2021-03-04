@@ -6,12 +6,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const pkg = require('./package.json')
 
-// const isDevMode = process.env.NODE_ENV
-
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'production',
-  devtool: 'source-map',
   entry: {
     popup: './popup/index.js',
     background: './background.js',

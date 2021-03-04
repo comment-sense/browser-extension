@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack -w",
-    "dev:production": "NODE_ENV=production webpack -w",
+    "dev": "nodemon -x yarn watch",
+    "watch": "webpack -w",
     "commit": "cz",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -38,6 +38,7 @@
     "html-webpack-plugin": "^5.2.0",
     "less-loader": "^8.0.0",
     "mini-css-extract-plugin": "^1.3.9",
+    "nodemon": "^2.0.7",
     "prettier": "^2.2.1",
     "prop-types": "^15.7.2",
     "style-loader": "^2.0.0",
