@@ -19,7 +19,7 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.js$/, loader: 'babel-loader' },
+      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       {
         test: /\.(sc|sa|c)ss$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
@@ -31,7 +31,12 @@ module.exports = {
     new webpack.ProgressPlugin(),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
-      patterns: [{ from: 'icons', to: 'icons' }, { from: 'manifest.json' }],
+      patterns: [
+        { from: 'icons', to: 'icons' },
+        { from: 'manifest.json' },
+        { from: 'utils/google-api.js' },
+        { from: 'utils/gapi.js' },
+      ],
     }),
     new HtmlWebpackPlugin({
       filename: 'popup.html',

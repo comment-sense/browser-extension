@@ -19,6 +19,7 @@
     "@babel/preset-env": "^7.13.5",
     "@babel/preset-react": "^7.12.13",
     "@types/firefox-webext-browser": "^82.0.0",
+    "@types/gapi": "^0.0.39",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^4.0.0",
     "autoprefixer": "^10.2.4",
@@ -57,6 +58,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.5.0",
     "antd": "^4.12.3",
+    "googleapis": "^67.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }

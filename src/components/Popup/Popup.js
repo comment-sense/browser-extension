@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Switch, Card } from 'antd'
-import styles from './popup.module.css'
-import brandURI from '../icons/logo@48x48.png'
-import { Sentiment, Overview, Summary } from '../components'
+import styles from './Popup.module.css'
+import brandURI from '../../icons/logo@48x48.png'
+import { Sentiment, Overview, Summary } from '../index'
 import 'antd/dist/antd.compact.min.css'
-import { getVideoId } from '../utils'
+import { getVideoId } from '../../utils'
 
 const handleDarkMode = checked => console.log(checked)
 
