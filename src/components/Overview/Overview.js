@@ -1,11 +1,12 @@
 import React from 'react'
 import { Button, Descriptions } from 'antd'
 
-const Overview = ({ onAnalyze, isAnalyzed }) => {
+const Overview = ({ onAnalyze, isAnalyzed, videoId }) => {
+  const { Item } = Descriptions
   return (
     <Descriptions
       bordered
-      title="Video Title"
+      title={`Video ID: ${videoId}`}
       extra={
         !isAnalyzed ? (
           <Button type="primary" onClick={onAnalyze}>
@@ -14,12 +15,12 @@ const Overview = ({ onAnalyze, isAnalyzed }) => {
         ) : null
       }
     >
-      <Descriptions.Item label="Creator">Traversy Media</Descriptions.Item>
-      <Descriptions.Item label="Video Length">1hr 30min</Descriptions.Item>
-      <Descriptions.Item label="Uploaded At">'Today</Descriptions.Item>
-      <Descriptions.Item label="Total Comments">6,398</Descriptions.Item>
-      <Descriptions.Item label="Total Likes">1,361</Descriptions.Item>
-      <Descriptions.Item label="Total Dislikes">25K</Descriptions.Item>
+      <Item label="Creator">Traversy Media</Item>
+      <Item label="Video Length">1hr 30min</Item>
+      <Item label="Uploaded At">'Today</Item>
+      <Item label="Total Comments">6,398</Item>
+      <Item label="Total Likes">1,361</Item>
+      <Item label="Total Dislikes">25K</Item>
     </Descriptions>
   )
 }

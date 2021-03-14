@@ -1,7 +1,7 @@
 {
   "name": "Comment Sense",
   "description": "AI powered YouTube comments analyzer",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "manifest_version": 2,
   "icons": {
     "48": "icons/logo@48x48.png",
@@ -14,5 +14,11 @@
       "32": "icons/icon@32x32.png",
       "64": "icons/icon@64x64.png"
     }
-  }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "*://www.youtube.com/*"
+  ]
 }

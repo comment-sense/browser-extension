@@ -36,12 +36,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'popup.html',
       template: 'popup/popup.html',
-      chunks: 'popup',
+      chunks: ['popup'],
     }),
     new HtmlWebpackPlugin({
       filename: 'options.html',
       template: 'options/options.html',
-      chunks: 'options',
+      chunks: ['options'],
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
